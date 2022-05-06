@@ -53,11 +53,12 @@ $mediaVoti = 0;
 
         <?php 
             $mediaVoti = 0;
-            for($y = 0; $y < count($alunni[$i]['voti']); $y++) {
+            // for($y = 0; $y < count($alunni[$i]['voti']); $y++) {
 
-                $mediaVoti += $alunni[$i]['voti'][$y];
+            //     $mediaVoti += $alunni[$i]['voti'][$y];
 
-            }
+            // }
+            $mediaVoti = array_sum( $alunni[$i]['voti'] );
             echo 'Media voto: ' . $mediaVoti / count($alunni[$i]['voti']);
         
         ?>

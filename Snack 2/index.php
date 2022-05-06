@@ -1,11 +1,9 @@
 <?php 
-
 // Controllo se ho inserito i dati
-if( !empty($_GET['name']) && !empty($_GET['mail']) && !empty($_GET['age']) ) {
+$name = (!empty( $_GET['name'] ) ) ? $_GET['name'] : '';
+$mail = (!empty( $_GET['mail'] ) ) ? $_GET['mail'] : '';
+$age = (!empty( $_GET['age'] ) ) ? $_GET['age'] : '';
 
-    $name = $_GET['name'];
-    $mail = $_GET['mail'];
-    $age = $_GET['age'];
     $accesso = '';
 
     if( strlen($name) > 3 && strpos($mail, '.') && strpos($mail, '@') && is_numeric($age) == 1 ){
@@ -18,7 +16,7 @@ if( !empty($_GET['name']) && !empty($_GET['mail']) && !empty($_GET['age']) ) {
 
     }
 
-}
+
 
 ?>
 
